@@ -16,7 +16,7 @@ Supports:
  * All modern browsers (including mobile)
  * WebGL or Canvas rendering
  * all type of loader (ply and stl tested, show example html file)
- * Point info and distance measurements (feel free to develop thickness, angle and radius measurements :smiley: :boom:)
+ * Point info and distance measurements (feel free to develop thickness, angle and radius measurements :muscle: :pray: :smiley: :boom:)
  * Getting information about selected point on a 3D model (coordinates, face, normal)
 	
 
