@@ -58,9 +58,9 @@ Link all necessary JS files in module :
     import {TrackballControls} from './js/dependencies/TrackballControls.js';
     import {STLLoader} from './js/dependencies/STLLoader.js';
     import {PLYLoader} from './js/dependencies/PLYLoader.js';
-    import {View3D} from './js/3DView2/3DView.Measurements.js';
-    import {MeasurementInfo} from './js/3DView2/measurements/Measurement.Info.js';
-    import {MeasurementDistance} from './js/3DView2/measurements/Measurement.Distance.js';
+    import {View3D} from './js/3DView/3DView.Measurements.js';
+    import {MeasurementInfo} from './js/3DView/measurements/Measurement.Info.js';
+    import {MeasurementDistance} from './js/3DView/measurements/Measurement.Distance.js';
    </script>
 ```
 		
