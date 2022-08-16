@@ -2,7 +2,9 @@
 This repository is an update of 3DView.Measurements with the last threejs library (release 142)
 
 conversion process :
+
     * convert class to es6
+    
     * change deprecated method 
 
 
