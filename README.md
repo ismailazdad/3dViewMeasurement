@@ -29,6 +29,7 @@ Author: ismail azdad / ismail.azdad@gmail.com
 ### Usage ###
 
 [Live sample STL] (http://ismail.azdad.free.fr/3dMeasurement/index.html)
+
 [Live sample ply] (http://ismail.azdad.free.fr/3dMeasurement/index_plyLoader.html)
 
 Link all necessary JS files from Three.js r142 (included)  
