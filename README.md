@@ -35,6 +35,12 @@ Author: ismail azdad / ismail.azdad@gmail.com
 
 
 
+-----------------------------
+
+![Alt Text](http://ismail.azdad.free.fr/3dMeasurement/Screencast.gif)
+
+
+
 
 Link all necessary JS files from Three.js r142 (included)  
 ```html
