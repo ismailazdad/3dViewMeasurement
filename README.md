@@ -7,8 +7,6 @@ conversion process :
     
     * change deprecated method 
 
-
-# 3DView.Measurements
 Advanced JavaScript 3D models viewing control with interactive measurements
 
 ### Description ###
