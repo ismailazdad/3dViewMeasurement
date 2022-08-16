@@ -27,16 +27,10 @@ Author: ismail azdad / ismail.azdad@gmail.com
 
 ### Usage ###
 
-
-
-
-
-
-
 [Live sample STL] (http://ismail.azdad.free.fr/3dMeasurement/index.html)
 
-[Live sample ply] (http://ismail.azdad.free.fr/3dMeasurement/index_plyLoader.html)
 
+[Live sample ply] (http://ismail.azdad.free.fr/3dMeasurement/index_plyLoader.html)
 
 
 
@@ -76,7 +70,7 @@ Link all necessary JS files in module :
    </script>
 ```
 		
-This code creates creates a renderer; loads the STL file; request the user to add a measurement and listens to measurement events.
+This code creates a renderer; loads the STL file; request the user to add a measurement and listens to measurement events.
 
 ```html
 <script>
