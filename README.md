@@ -19,7 +19,6 @@ Supports:
  * Point info and distance measurements (feel free to develop thickness, angle and radius measurements :muscle: :pray: :smiley: :boom:)
  * Getting information about selected point on a 3D model (coordinates, face, normal)
 	
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 
 ### License ###
 [LGPL v3] (http://ismail.azdad.free.fr/3dMeasurement/LICENCE)
@@ -31,6 +30,9 @@ Author: ismail azdad / ismail.azdad@gmail.com
 [Live sample STL] (http://ismail.azdad.free.fr/3dMeasurement/index.html)
 
 [Live sample ply] (http://ismail.azdad.free.fr/3dMeasurement/index_plyLoader.html)
+
+![Alt Text](http://ismail.azdad.free.fr/3dMeasurement/Screencast_16-08-2022.gif)
+
 
 Link all necessary JS files from Three.js r142 (included)  
 ```html
