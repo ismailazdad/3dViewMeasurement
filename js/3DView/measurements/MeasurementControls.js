@@ -28,17 +28,17 @@ class MeasurementControls extends Object3D {
         this.control = control
 
         this.domElement.addEventListener("mousedown", onPointerDown, false);
-        // this.domElement.addEventListener("touchstart", onPointerDown, false);
+        this.domElement.addEventListener("touchstart", onPointerDown, false);
         this.domElement.addEventListener("mousemove", onPointerHover, false);
-        // this.domElement.addEventListener("touchmove", onPointerHover, false);
+        this.domElement.addEventListener("touchmove", onPointerHover, false);
         this.domElement.addEventListener("mousemove", onPointerMove, false);
-        // this.domElement.addEventListener("touchmove", onPointerMove, false);
+        this.domElement.addEventListener("touchmove", onPointerMove, false);
         this.domElement.addEventListener("mouseout", onPointerMove, false);
         this.domElement.addEventListener("mouseup", onPointerUp, false);
         this.domElement.addEventListener("mouseout", onPointerUp, false);
-        // this.domElement.addEventListener("touchend", onPointerUp, false);
-        // this.domElement.addEventListener("touchcancel", onPointerUp, false);
-        // this.domElement.addEventListener("touchleave", onPointerUp, false);
+        this.domElement.addEventListener("touchend", onPointerUp, false);
+        this.domElement.addEventListener("touchcancel", onPointerUp, false);
+        this.domElement.addEventListener("touchleave", onPointerUp, false);
 
         window.addEventListener('keydown', onKeyDown, false);
 
