@@ -1,5 +1,5 @@
 # 3dViewMeasurement #
-This repository is an update of 3DView.Measurements with the last threejs library (release 142)
+This repository is an update of [3DView.Measurements](https://github.com/AwesomeTeamOne/3DView.Measurements) with the last threejs library (release 142)
 
 conversion process :
 
