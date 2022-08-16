@@ -27,17 +27,17 @@ Author: ismail azdad / ismail.azdad@gmail.com
 
 ### Usage ###
 
-[Live sample STL] (http://ismail.azdad.free.fr/3dMeasurement/index.html)
 
-[Live sample ply] (http://ismail.azdad.free.fr/3dMeasurement/index_plyLoader.html)
 
 ![Alt Text](http://ismail.azdad.free.fr/3dMeasurement/Screencast_16-08-2022.gif)
 
 
 
------------------------------
+[Live sample STL] (http://ismail.azdad.free.fr/3dMeasurement/index.html)
 
-![Alt Text](http://ismail.azdad.free.fr/3dMeasurement/Screencast.gif)
+[Live sample ply] (http://ismail.azdad.free.fr/3dMeasurement/index_plyLoader.html)
+
+![Alt Text](http://ismail.azdad.free.fr/3dMeasurement/test.gif)
 
 
 
