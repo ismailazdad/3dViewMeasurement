@@ -37,10 +37,10 @@ Author: ismail azdad / ismail.azdad@gmail.com
 
 [Live sample ply] (http://ismail.azdad.free.fr/3dMeasurement/index_plyLoader.html)
 
-![Alt Text](http://ismail.azdad.free.fr/3dMeasurement/test.gif)
 
 
 
+![Alt Text](http://ismail.azdad.free.fr/3dMeasurement/Screencast_16-08-2022.gif)
 
 Link all necessary JS files from Three.js r142 (included)  
 ```html
