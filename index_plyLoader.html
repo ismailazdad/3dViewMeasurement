@@ -11,7 +11,6 @@
             font-family:Monospace;
             font-size:13px;
             text-align:center;
-
             background-color: #fff;
             margin: 0px;
             overflow: hidden;
@@ -98,11 +97,8 @@
     let container, stats, camera, scene, renderer, controls;
     container = document.createElement('div');
     document.body.appendChild(container);
-
-
     camera = new PerspectiveCamera(35, window.innerWidth / window.innerHeight, 1, 15);
     camera.position.set(3, 0.15, 3);
-
     // renderer
     renderer = new WebGLRenderer({antialias: true});
     renderer.setPixelRatio(window.devicePixelRatio);
@@ -110,7 +106,6 @@
     renderer.outputEncoding = sRGBEncoding;
     renderer.shadowMap.enabled = true;
     container.appendChild(renderer.domElement);
-
 
     //you can use the type of controls you want TrackballControls,OrbitControls...
     const control = new OrbitControls(camera, renderer.domElement);
@@ -132,22 +127,24 @@
 
 
 
-    const loader = new STLLoader();
-    // //load STL file
-    // for STL object you can use addGeometry method or adding object directly
-    loader.load('./models/Box.stl', function (geometry) {
-        view.addGeometry( geometry );
-    });
+    var loader = new PLYLoader();
+    loader.load(
+        "./models/dolphins.ply",
+        function(geometry) {
+            geometry.computeVertexNormals();
+            var material = new THREE.MeshStandardMaterial({
+                color: 0x0055ff,
+                flatShading: true
+            });
+            var mesh = new THREE.Mesh(geometry, material);
+            mesh.position.y = -0.7;
+            mesh.position.z = 0.3;
+            mesh.rotation.x = -Math.PI / 2;
+            mesh.scale.multiplyScalar(0.01);
+            view.scene.add( mesh );
+        }
+    );
 
-    // loader.load('./models/Box.stl', function (geometry) {
-    //     const material = new THREE.MeshPhongMaterial({color: 0xff5533, specular: 0x111111, shininess: 200});
-    //     const mesh = new THREE.Mesh(geometry, material);
-    //     mesh.position.set(-0.7, -0.7, -0.7);
-    //     mesh.scale.set(0.15, 0.15, 0.15);
-    //     mesh.castShadow = true;
-    //     mesh.receiveShadow = true;
-    //     view.scene.add(mesh)
-    // });
 
     //Lights
     view.scene.add(new HemisphereLight(0x443333, 0x111122));

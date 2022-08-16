@@ -15,8 +15,6 @@ class MeasurementGizmoMaterial extends MeshBasicMaterial {
 }
 export {MeasurementGizmoMaterial}
 
-
-
 ////////////////////////////////////////////////////////////////////////////////
 //Measurements
 //Measurement interface (base class)
@@ -25,8 +23,8 @@ class Measurement extends Object3D {
 	constructor() {
 		super();
 		this.measurementGizmo = null;
-		this.color = new Color(0xc75050);;
-		this.comments = "dfdfdfd";
+		this.color = new Color(0xc75050);
+		this.comments = "";
 		this.visible = false;
 
 		this.createGizmo = function(container) {
@@ -57,7 +55,6 @@ class Measurement extends Object3D {
 			this.comments = text;
 		};
 
-
 	}
 
 	}
@@ -77,8 +74,6 @@ class MeasurementGizmo extends Object3D{
 		this.dragOrigin = new Vector3();
 		this.lastPosition = new Vector3();
 		this.dragGizmo = '';
-		this.container = container;
-		this.measurement = measurement;
 		this.selected = false;
 		const scope = this;
 		this.controlPoints = [];
@@ -105,17 +100,12 @@ class MeasurementGizmo extends Object3D{
 		}
 
 		this.init = function () {
-
 			this.handles = new Object3D();
 			this.pickers = new Object3D();
-
 			this.add(this.handles);
 			this.add(this.pickers);
 
-
-
 			if (this.container) {
-				console.log('MeasurementGizmo init')
 				this.text = new UI.Text();
 				this.text.setDisplay( 'none' );
 				this.text.setPosition( 'absolute' );
@@ -131,14 +121,11 @@ class MeasurementGizmo extends Object3D{
 				this.container.add( this.text );
 
 				this.text.dom.addEventListener( 'mousedown', function(event) {
-					console.log('MeasurementGizmo text addEventListener mousedown')
 					event.cancel = true;
 					scope.dispatchEvent( { type: 'textMouseDown', measurementGizmo: scope, originalEvent: event} );
 				});
 
 				this.text.dom.addEventListener( 'mouseover', function(event) {
-						console.log("MeasurementGizmo onMouseOver test ")
-						console.log("onMouse scope.selected",scope.selected)
 					if (this.selected !== false) {
 						scope.text.setBackgroundColor('#FFFF88');
 						scope.text.setBorder('2px solid #FF0000');
@@ -153,8 +140,6 @@ class MeasurementGizmo extends Object3D{
 				});
 
 				this.text.dom.addEventListener( 'mouseout', function(event) {
-					console.log("MeasurementGizmo onMouseOut test ")
-					console.log("onMouse scope.selected",scope.selected)
 					if (scope.selected !== false) {
 						scope.text.setBackgroundColor('#FFFF88');
 						scope.text.setBorder('2px solid #FF0000');
@@ -165,21 +150,17 @@ class MeasurementGizmo extends Object3D{
 						scope.text.setOpacity('0.8');
 					}
 				});
-
 			}
 
 			for ( var i in this.handleGizmos ) {
-
 				var handle = this.handleGizmos[i][0];
 				handle.name = i;
 				this.transformGizmo(handle, this.handleGizmos[i][1], this.handleGizmos[i][2]);
 				handle.visible = false;
 				this.handles.add( handle );
-
 			}
 
 			for ( var i in this.pickerGizmos ) {
-
 				var picker = this.pickerGizmos[i][0];
 				picker.name = i;
 				this.transformGizmo(picker, this.pickerGizmos[i][1], this.pickerGizmos[i][2]);
@@ -191,32 +172,23 @@ class MeasurementGizmo extends Object3D{
 		}
 
 		this.hide = function () {
-
 			for ( var j in this.handles.children ) this.handles.children[j].visible = false;
 			for ( var j in this.pickers.children ) this.pickers.children[j].visible = false;
 			if (this.text) this.text.setDisplay( 'none' );
 			this.measurement.visible = false;
-
 		}
 
 		this.show = function () {
-
 			for ( var j in this.handles.children ) this.handles.children[j].visible = false;
 			for ( var j in this.pickers.children ) this.pickers.children[j].visible = showPickers;
 			if (this.text && this.text.dom.textContent) this.text.setDisplay( 'block' );
 			this.measurement.visible = true;
-
 		}
 
 		this.isVisible = function () {
 			return this.measurement.visible;
 		}
 
-		this.getMainPicker = function () {
-			for ( var i in this.pickerGizmos )
-				return this.pickerGizmos[i][0];
-
-		}
 
 		this.getTextPicker = function () {
 			if (this.pickerGizmos['TEXT'])
@@ -226,7 +198,6 @@ class MeasurementGizmo extends Object3D{
 		}
 
 		this.highlight = function (control) {
-			console.log('MeasurementGizmo highlight')
 			var handle;
 			for (var i in this.handleGizmos) {
 				handle = this.handleGizmos[i][0];
@@ -235,7 +206,6 @@ class MeasurementGizmo extends Object3D{
 					handle.material.opacity = handle.material.oldOpacity;
 				}
 			}
-
 			if (control && this.handleGizmos[control]) {
 				handle = this.handleGizmos[control][0];
 				handle.material.oldColor = handle.material.color.clone();
@@ -263,7 +233,6 @@ class MeasurementGizmo extends Object3D{
 		}
 
 		this.dragMove = function(gizmo, eye, cameraPosition) {
-			console.log('MeasurementGizmo dragMove')
 			if (gizmo !== this.dragGizmo) {
 				return;
 			}
@@ -274,9 +243,6 @@ class MeasurementGizmo extends Object3D{
 				this.lastPosition = new Vector3().copy(intersection);
 			}
 		}
-
-
-
 
 		this.mustDragGizmo = function() {
 			return false;
@@ -310,14 +276,11 @@ class MeasurementGizmo extends Object3D{
 		this.getScreenCoords = function( position, camera ) {
 			var rect = this.container.dom.getBoundingClientRect();
 			var widthHalf = rect.width / 2, heightHalf = rect.height / 2;
-
 			var vector = new Vector3().copy(position);
-
 			if (vector.project)
 				vector.project(camera);
 			else
 				projector.projectVector( vector, camera );
-
 			return new Vector2(( vector.x * widthHalf ) + widthHalf, - ( vector.y * heightHalf ) + heightHalf);
 		}
 
@@ -332,12 +295,9 @@ class MeasurementGizmo extends Object3D{
 			return controlPoints;
 		}
 
-
-
 		this.offsetControlPoint = function(i, offset) {
 			//get points in world coordinates
 			if (i >= this.controlPoints.length || !this.controlPoints[i].point) return;
-
 			if (this.controlPoints[i].object) {
 				var point = new Vector3().copy(this.controlPoints[i].point);
 				this.controlPoints[i].object.localToWorld(point);
@@ -346,8 +306,6 @@ class MeasurementGizmo extends Object3D{
 				this.controlPoints[i].point.copy(point);
 			} else
 				this.controlPoints[i].point.add(offset);
-
-
 		}
 
 		this.setText = function(text, position, camera) {
@@ -357,17 +315,13 @@ class MeasurementGizmo extends Object3D{
 				var rect = this.text.dom.getBoundingClientRect();
 				coords.x -= rect.width/2;
 				coords.y -= rect.height/2;
-
 				var containerRect = this.container.dom.getBoundingClientRect();
-
 				if (text) this.text.setValue( text );
 				this.text.setLeft(coords.x.toString() +'px');
 				this.text.setTop(coords.y.toString() +'px');
-
 				rect = this.text.dom.getBoundingClientRect();
 				if (rect.width > 0 && rect.height > 0 && (rect.left > containerRect.right || rect.right < containerRect.left || rect.top > containerRect.bottom || rect.bottom < containerRect.top))
 					this.text.setDisplay( 'none' );
-
 			}
 		}
 
@@ -396,10 +350,7 @@ class MeasurementGizmo extends Object3D{
 				this.measurement.parent.remove( this.measurement );
 		}
 
-
-
 		this.select = function (selected) {
-			console.log('Measurement select')
 			if (this.text) {
 				if (this.selected !== false) {
 					this.text.setBackgroundColor('#FFFF88');
@@ -433,17 +384,12 @@ class MeasurementGizmo extends Object3D{
 	}
 
 	addControlPoint( point, object, forceAdd, face, callbackAddedObject ) {
-		console.log('MeasurementGizmo passage addControlPoint')
 		var point = new Vector3().copy(point);
 		if (object) {
 			object.worldToLocal(point);
 		}
 		this.controlPoints.push({point: point, object: object});
 	}
-
-
-
-
 }
 export {MeasurementGizmo}
 
