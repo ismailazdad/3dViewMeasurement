@@ -22,7 +22,7 @@ Supports:
 
 
 ### License ###
-[LGPL v3] (https://github.com/ismailazdad/3dViewMeasurement/LICENSE)
+[LGPL v3] (https://github.com/ismailazdad/3dViewMeasurement/blob/main/LICENSE)
 
 Author: ismail azdad / ismail.azdad@gmail.com
 
