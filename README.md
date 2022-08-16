@@ -19,7 +19,7 @@ Supports:
  * Point info and distance measurements (feel free to develop thickness, angle and radius measurements :muscle: :pray: :smiley: :boom:)
  * Getting information about selected point on a 3D model (coordinates, face, normal)
 	
-
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 
 ### License ###
 [LGPL v3] (http://ismail.azdad.free.fr/3dMeasurement/LICENCE)
