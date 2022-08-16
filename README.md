@@ -113,6 +113,25 @@ This code creates creates a renderer; loads the STL file; request the user to ad
         view.scene.add(mesh)
     });
 
+    //PLY file 
+    var loader = new PLYLoader();
+    loader.load(
+        "./models/dolphins.ply",
+        function(geometry) {
+            geometry.computeVertexNormals();
+            var material = new THREE.MeshStandardMaterial({
+                color: 0x0055ff,
+                flatShading: true
+            });
+            var mesh = new THREE.Mesh(geometry, material);
+            mesh.position.y = -0.7;
+            mesh.position.z = 0.3;
+            mesh.rotation.x = -Math.PI / 2;
+            mesh.scale.multiplyScalar(0.01);
+            view.scene.add( mesh );
+        }
+    );
+
 	//request user to make new measurement
     var element=document.getElementById("infobutton");
     var listener=element.addEventListener('click',function(event){
