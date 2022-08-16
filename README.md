@@ -31,10 +31,10 @@ Author: ismail azdad / ismail.azdad@gmail.com
 
 [Live sample ply] (http://ismail.azdad.free.fr/3dMeasurement/index_plyLoader.html)
 
-![In Action](http://ismail.azdad.free.fr/3dMeasurement/Screencast.gif)
+![Alt Text](http://ismail.azdad.free.fr/3dMeasurement/Screencast.gif)
 
 
-sdsdsd
+
 
 Link all necessary JS files from Three.js r142 (included)  
 ```html
