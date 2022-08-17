@@ -21,7 +21,7 @@ Supports:
 	
 
 ### License ###
-[LGPL v3] (http://ismail.azdad.free.fr/3dMeasurement/LICENCE)
+[LGPL v3](http://ismail.azdad.free.fr/3dMeasurement/LICENCE)
 
 Author: ismail azdad / ismail.azdad@gmail.com
 
