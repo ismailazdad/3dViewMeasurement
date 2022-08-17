@@ -35,6 +35,8 @@ Author: ismail azdad / ismail.azdad@gmail.com
 
 [Live sample STL link](http://ismail.azdad.free.fr/3dMeasurement/index.html)
 
+[go](http://ismail.azdad.free.fr/3dMeasurement/index.html){:target="_blank" rel="noopener"}
+
 
 ![Alt Text](http://ismail.azdad.free.fr/3dMeasurement/test.gif)
 
