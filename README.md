@@ -23,9 +23,8 @@ Supports:
 ### License ###
 [LGPL v3](http://ismail.azdad.free.fr/3dMeasurement/LICENCE)
 
-Author: ismail azdad / [:mailbox_with_no_mail:](mailto:ismail.azdad@gmail.com?subject=[3dMeasurement])
+Author: ismail azdad / :mailbox_with_no_mail: ismail.azdad@gmail.com
 
-<a href="mailto:ismail.azdad@gmail.com?subject=3dMeasurement">Email Me</a>
 
 ### Usage ###
 
