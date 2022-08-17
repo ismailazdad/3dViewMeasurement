@@ -27,16 +27,10 @@ Author: ismail azdad / ismail.azdad@gmail.com
 
 ### Usage ###
 
-[Live sample STL] (http://ismail.azdad.free.fr/3dMeasurement/index.html)
+[Live sample STL](http://ismail.azdad.free.fr/3dMeasurement/index.html)
 
 
-[Live sample ply] (http://ismail.azdad.free.fr/3dMeasurement/index_plyLoader.html)
-
-
-[Live sample STL link](http://ismail.azdad.free.fr/3dMeasurement/index.html)
-
-[go](http://ismail.azdad.free.fr/3dMeasurement/index.html){:target="_blank" rel="noopener"}
-
+[Live sample ply](http://ismail.azdad.free.fr/3dMeasurement/index_plyLoader.html)
 
 ![Alt Text](http://ismail.azdad.free.fr/3dMeasurement/test.gif)
 
