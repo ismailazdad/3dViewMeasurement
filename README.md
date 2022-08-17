@@ -10,7 +10,7 @@ conversion process :
 Advanced JavaScript 3D models viewing control with interactive measurements
 
 ### Description ###
-3D viewing control with interactive measurements based on [Three.js] (http://threejs.org/).
+3D viewing control with interactive measurements based on [Three.js](http://threejs.org/).
 
 Supports:
  * All modern browsers (including mobile)
