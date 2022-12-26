@@ -28,7 +28,7 @@ Author: ismail azdad / :mailbox_with_no_mail: ismail.azdad@gmail.com
 
 ### Usage ###
 
-[Live sample STL](http://ismail.azdad.free.fr/3dMeasurement/index.html)
+[Live sample STL](https://3dmeasurement.surge.sh/)
 
 
 [Live sample ply](http://ismail.azdad.free.fr/3dMeasurement/index_plyLoader.html)
