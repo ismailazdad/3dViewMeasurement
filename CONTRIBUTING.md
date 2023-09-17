@@ -1,0 +1,3 @@
+- [] add thickness measurement
+- [] add angle measurement
+- [] add radius measurement
